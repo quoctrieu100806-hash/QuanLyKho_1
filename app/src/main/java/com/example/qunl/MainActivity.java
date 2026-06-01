@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         screenAnh1 = findViewById(R.id.screen_anh_1);
         screenAnh2 = findViewById(R.id.screen_anh_2);
-        bottomNavigation = findViewById(R.id.bottomNavigation);
 
         bottomNavigation.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
