@@ -16,23 +16,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Ánh xạ id từ file XML qua
         screenAnh1 = findViewById(R.id.screen_anh_1);
         screenAnh2 = findViewById(R.id.screen_anh_2);
         bottomNavigation = findViewById(R.id.bottomNavigation);
 
-        // Lắng nghe sự kiện click chọn menu dưới cùng
         bottomNavigation.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
 
             if (itemId == R.id.nav_home) {
-                // Hiện toàn bộ Màn hình 1 và ẩn sạch Màn hình 2
                 screenAnh1.setVisibility(View.VISIBLE);
                 screenAnh2.setVisibility(View.GONE);
                 return true;
 
             } else if (itemId == R.id.nav_tasks) {
-                // Hiện toàn bộ Màn hình 2 và ẩn sạch Màn hình 1
                 screenAnh1.setVisibility(View.GONE);
                 screenAnh2.setVisibility(View.VISIBLE);
                 return true;
